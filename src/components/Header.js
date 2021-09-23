@@ -46,15 +46,20 @@ function Header() {
 
 export default Header;
 
+// Logo
 const Nav = styled.nav`
 height: 70px;
 background-color: #090b13;
 display: flex;
 align-items: center;
 padding: 0 36px;
-overflow: hidden;
+overflow-x: hidden;
 img:hover {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    justify-content: space-between;
 }
 `;
 
@@ -62,6 +67,7 @@ const Logo = styled.img`
 width: 80px;
 `;
 
+// Navbar
 const NavMenu = styled.div`
 display: flex;
 flex: 1;
@@ -114,8 +120,15 @@ a:hover {
 }
 `;
 
+// User profile picture
 const UserImg = styled.img`
 height: 45px;
 border-radius: 50px;
 cursor: pointer;
+
+@media (max-width: 768px) {
+    height: 55px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+}
 `;
